@@ -10,9 +10,15 @@ int main() {
   for (int i = 0; i < 17; i++) {  // fill array with random
     myArray[i] = ( rand() % 25 ); // numbers between 0 and 24
     
-    // draw here with std::cout and std::endl
-    
-    std::cout << myArray[i] << std::endl;
+    std::cout << myArray[i];
+
+    for (int j = 0; j < myArray[i]; j++){
+      if (myArray[i] < 10 && j == 0){
+        std::cout << " ";
+      }
+      std::cout << "\u2589";
+    }
+    std::cout << std::endl;
   }
   return 0;
 }
