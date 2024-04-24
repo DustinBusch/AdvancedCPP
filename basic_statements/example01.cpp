@@ -4,10 +4,23 @@
   boolean variable 'result' below.
   */
 
-int main() {
-  bool result = false; 
+
+#include <iostream>
+using namespace std;
+
+int main(){
+  int number1;
+  int number2;
+  cout << "Number 1: ";
+  cin >> number1 ;
+  cout << "Number 2: ";
+  cin >> number2 ;
   
-
-
-  return (int) result;
+  if (number2%number1 == 0){
+    cout << true << endl;
+  }
+  else{
+  cout << false << endl;
+  }
+  return 0;
 }

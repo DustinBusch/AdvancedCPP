@@ -8,9 +8,26 @@
                 X  X            X X
                                X   X      */
 #include <iostream>  // to allow use of std::cout and std::endl
+
+using namespace std;
+
 int main( ) {
+int size;
 
+cout << "size: ";
+cin >> size;
 
-
+for (int i = 0; i < size; i++ ){
+  for (int j = 0; j < size; j++){
+    if ( i == j || i == size - j - 1){
+      cout << "X";
+    }
+    else{
+      cout << " ";
+    }
+  }
+  cout << endl;
+}
+  
   return 0;
 }

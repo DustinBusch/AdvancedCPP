@@ -4,10 +4,10 @@
   smaller than 43.7 
   */
 #include <iostream>  // to allow use of std::cout and std::endl
+using namespace std;
 int main( ) {
-      
-
-
-
+  for (double i = 120; i > 43.7; i--){
+    cout << i << endl;
+  }
   return 0;
 }
