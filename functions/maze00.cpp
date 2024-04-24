@@ -9,6 +9,10 @@ int main() {
     mvaddch(y, x, '@'); // ncurses function: draw a @ at position (x,y)
     c = getch();        // capture the user's pressed key
     // handle here the moving
+    switch (c){
+      case 'w': y += 1;
+                break;
+      case 'd': y -= 1
   }
   endwin(); // ncurses function: close the ncurses window
   return 0;
