@@ -12,7 +12,10 @@ int main() {
     switch (c){
       case 'w': y += 1;
                 break;
-      case 'd': y -= 1
+      case 's': y -= 1
+                break;
+      case 'a': x--; break;
+      case 'd': x++; break;
   }
   endwin(); // ncurses function: close the ncurses window
   return 0;
