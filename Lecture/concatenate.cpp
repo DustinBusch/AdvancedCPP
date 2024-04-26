@@ -27,5 +27,6 @@ int main(){
     }
   }
   std:: cout << "Concatenated string: " << s << std::endl;
+  std:: cout << s[len + 1] << s[len + 2] << std::endl;
   return 0;
 }
