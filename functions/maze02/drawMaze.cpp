@@ -1,5 +1,6 @@
 /* Drawing functions implemented */
 #include "drawMaze.h"  // functions to draw colored text in terminal
+#include <random>
 
 // initialize all the functions to start drawing in ncurses
 void initNCurses() {
@@ -12,9 +13,22 @@ void initNCurses() {
 
 void clearScreen() {
   attron(COLOR_PAIR(1));  // set color pair to 1
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  int min = 0;
+  int max = 99;
+  
+  std::uniform_int_distribution<> dis(min, max);
+
   for ( auto line = 0; line < LINES; line++) {
     for ( auto col = 0; col < COLS; col++) {
-      mvaddch(line, col, '.');  // ncurses function: draw '.' at (x,y)
+      int randInt = dis(gen);
+      if (randInt < 50) {
+        mvaddch(line, col, '1');
+      }
+      else{
+        mvaddch(line, col, '0');
+      }
     }
   }
   attroff(COLOR_PAIR(1));
