@@ -13,5 +13,20 @@ Course overview:
 [Slide set 02](/Advanced_CPP02.pdf)
 [Assignments set 02a - functions](/functions/)
 [Assignments set 02b - arrays](/arrays/)
+[Video](https://youtu.be/sny1jehjS4E)
 
 [Slide set 03](/Advanced_CPP03.pdf)
+[Assignments set 03 - classes](/classes/)
+[Video](https://youtu.be/Hv2SzfJPON8)
+
+[Slide set 04](/Advanced_CPP04.pdf)
+[Assignments set 04 - pointers](/pointers/)
+[Video](https://youtu.be/gYD7SvXS6eY)
+
+[Slide set 05](/Advanced_CPP05.pdf)
+[Assignments set 05a - inheritance](/inheritance/)
+[Assignments set 05b - polymorphism](/polymorphism/)
+
+
+
+
