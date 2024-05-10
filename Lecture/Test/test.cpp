@@ -5,13 +5,13 @@ class Test {
   int attribute1;
  public:
   bool attribute2;
-  void method1( int parameter ) { attribute1 = parameter; };
+  Test(int parameter) {
+    attribute1 = parameter;
+  }
   void method2() { std::cout << attribute1 << std::endl;};
 };
 
 int main(){
-  Test myTest;
-  myTest.attribute2 = false;
-  myTest.method1(21);
+  Test myTest(21);
   return 0;
 }
