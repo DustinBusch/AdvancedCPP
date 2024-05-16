@@ -14,7 +14,23 @@ class NumberSequence {  // class for sequence of whole, positive numbers
 };
 
 // define all NumberSequence methods here
-//
+ NumberSequence::NumberSequence(uint16_t length) : length(length) {
+  seq = new uint16_t[length];
+  for (uint16_t i = 0; i < length; i++) {
+    seq[i] = i + 1;
+  }
+}
+void NumberSequence::forEach(std::function<uint16_t(uint16_t)> func) {
+  for (auto i = 0; i < length; i++) {
+    seq[i] = func(seq[i]);
+  }
+}
+
+void NumberSequence::print() const {
+  for (auto i = 0; i < length; i++) {
+    std::cout << seq[i] << std::endl;
+  }
+}
 
 uint16_t times2(uint16_t n) { return n*2; }
 

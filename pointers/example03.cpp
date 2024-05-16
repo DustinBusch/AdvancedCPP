@@ -6,10 +6,16 @@
 }
 int main() {
   // using a pointer to bitmap, and incrementing it, is possible:
-  auto *mousePointer = getBitmapAddress();
-  while ( *mousePointer != 0 )  std::cout << *(mousePointer++);
+  auto * const mousePointer = getBitmapAddress();
+  int i = 0;
+  while ( mousePointer[i] != 0 ) {
+    std::cout << mousePointer[i];
+    i++;
+  }
   std::cout << "\n";
   // Here mousePointer has changed, it's hard to get the original pointer.
   // Modify the above by protecting the pointer with const and redo the loop.
+
   return 0;
-}
+ }
+

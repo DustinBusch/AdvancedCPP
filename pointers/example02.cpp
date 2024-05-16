@@ -36,6 +36,7 @@ class GPSTrace {  // class for a GPS trace
  public:
   GPSTrace(uint16_t numPoints);
   ~GPSTrace();
+  GPSTrace(GPSTrace const &source);
   // add a new point to trace at position pos:
   void setPoint(GPSCoord newPoint, uint16_t pos);  // set a GPSCoord
   [[nodiscard]] int print() const;  // print entire trace
@@ -46,6 +47,9 @@ class GPSTrace {  // class for a GPS trace
 
 GPSTrace::GPSTrace(uint16_t numpoints): numPoints(numpoints) {
   points = new GPSCoord[numPoints];
+}
+GPSTrace::GPSTrace(GPSTrace const &source) {
+  points = source.points; numPoints = source.numPoints;
 }
 GPSTrace::~GPSTrace() {
   delete[] points; points = NULL; numPoints = 0;
@@ -68,5 +72,7 @@ int main() {
     point.setElevation(i*5.6);
     t.setPoint(point, i);
   }
-  return t.print();
+  GPSTrace m(t);
+  std::cout << t.print();
+  return m.print();
 }

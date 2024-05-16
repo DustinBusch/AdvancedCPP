@@ -4,6 +4,12 @@
 #include <iostream>
 
 // write the class Check here
+class Check {
+ public:
+  bool isThisMe(Check *a) {
+    return this == a;
+  }
+};
 
 int main() {
   Check a;  // a is an object of class Check
