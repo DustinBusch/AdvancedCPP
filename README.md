@@ -26,7 +26,13 @@ Course overview:
 [Slide set 05](/Advanced_CPP05.pdf)
 [Assignments set 05a - inheritance](/inheritance/)
 [Assignments set 05b - polymorphism](/polymorphism/)
+[Video](https://youtu.be/ebijwfUZFIU)
 
+[Slide set 06](/Advanced_CPP06.pdf)
+[Assignments set 06a - exceptions](/exceptions/)
+[Assignments set 06b - streams](/streams/)
+[Assignments set 06c - containers](/containers/)
+[Video](https://youtu.be/)
 
 
 
