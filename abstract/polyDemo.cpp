@@ -6,9 +6,7 @@ class Animal {  // Animal class stores the species and prints this in print()
   std::string _species;
  public:
   Animal(std::string species) { _species = species; }
-  void print() const { std::cout << getSound() << std::endl; }
- private:
-  virtual std::string getSound() const { return "I'm " + _species; };
+  virtual void print() const { std::cout << "I'm " +  _species << "\n"; }
 };
 
 class Dog : public Animal {  // Dogs inherit species from Animal and have a name
@@ -16,8 +14,7 @@ class Dog : public Animal {  // Dogs inherit species from Animal and have a name
   std::string _name;
  public:
   Dog(std::string name) : Animal("dog"), _name(name) {}
- private:
-  std::string getSound() const override { return "I am " + _name + ". Bark!"; }
+  void print() const override { std::cout << "I am " << _name << ". Bark!\n"; }
 };
 
 class Fish : public Animal {  // Fishes have species and subspecies
@@ -25,8 +22,7 @@ class Fish : public Animal {  // Fishes have species and subspecies
   std::string _subspecies;
  public:
   Fish(std::string subspecies) : Animal("fish"), _subspecies(subspecies) {}
- private:
-  std::string getSound() const override { return "I'm " + _subspecies + " (fish)"; }
+  void print() const override { std::cout << "I'm " << _subspecies << " (fish)\n"; }
 };
 
 int main() {
@@ -35,9 +31,9 @@ int main() {
   animals[1] = new Fish("Salmon");    // to objects of different
   animals[2] = new Dog("Scooby");     // subclasses (Dog, Fish, etc.)
   animals[3] = new Animal("some animal");  // or the animal base class
-  for (int i=0; i<15; i++) {
+  for (auto i=0; i<15; i++) {
    Animal * a = animals[rand() % 4];  // a is a polymorph variable: its
-   a->print();                        // print's behavior depends on the 
+   a->print();                        // print's behavior depends on the
   }                                   // object that a points to
   return 0;
 }
