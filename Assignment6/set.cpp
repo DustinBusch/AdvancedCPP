@@ -1,4 +1,4 @@
-/* Math Set -- Intersection, Union, Difference and build Sets with EmptySet 
+/* Math Set -- Intersection, Union, Difference
 * Author: Dustin Busch */
 
 #include <iostream>
