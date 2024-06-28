@@ -1,8 +1,7 @@
 # Advanced Programming in C++
 A collection of lecture slides and code from the Advanced Programming in C++ class. University of Siegen students can log into this [Moodle page](https://moodle.uni-siegen.de/course/view.php?id=34345) for organizational information (rooms, dates, assignment grades, etc.).
 
-The lecture slides are update here in real-time:
-https://docs.google.com/presentation/d/135ddC7r_z0iJaDsG9pqBxWZ0PFgxYG8ZoBCeQWuA7EQ
+All lecture slides [359 slides, 2.5 MB] are [downloadable here](Advanced_CPP.pdf)
 
 Course overview:
 
@@ -42,6 +41,10 @@ Course overview:
 [Assignments set 08a - abstract](/abstract/)
 [Assignments set 08b - enum](/enum/)
 [Video](https://youtu.be/5OUj9jzykOI)
+
++ [Slide set 09](/Advanced_CPP09.pdf)
+[Assignments set 09 - performance](/performance/)
+[Video](https://youtu.be/)
 
 
 
